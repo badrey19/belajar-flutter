@@ -10,22 +10,20 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Aplikasi Hello World'),
+          title: Text('Belajar Row&Column'),
         ),
-        body: Center(
-            child: Container(
-                color: Colors.lightBlue,
-                width: 150,
-                height: 100,
-                child: Text(
-                  'Hello World Hello World Hello World Hello World hello world',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.red,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 20),
-                ))),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Text 1'),
+            Text('Text 2'),
+            Text('text 3'),
+            Row(
+              children: [Text('text 4'), Text('Text 5'), Text('Text 6')],
+            )
+          ],
+        ),
       ),
     );
   }
