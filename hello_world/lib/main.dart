@@ -12,7 +12,20 @@ class myApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Aplikasi Hello World'),
         ),
-        body: Center(child: Text('Hello World')),
+        body: Center(
+            child: Container(
+                color: Colors.lightBlue,
+                width: 150,
+                height: 100,
+                child: Text(
+                  'Hello World Hello World Hello World Hello World hello world',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 20),
+                ))),
       ),
     );
   }
