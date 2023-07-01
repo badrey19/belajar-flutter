@@ -10,19 +10,20 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Belajar Row&Column'),
+          title: Text('Latihan Container'),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Text 1'),
-            Text('Text 2'),
-            Text('text 3'),
-            Row(
-              children: [Text('text 4'), Text('Text 5'), Text('Text 6')],
-            )
-          ],
+        body: Container(
+          color: Colors.red,
+          margin: EdgeInsets.fromLTRB(10, 20, 10, 5),
+          padding: EdgeInsets.only(top: 5, right: 10),
+          child: Container(
+            margin: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    colors: <Color>[Colors.amber, Colors.blue])),
+          ),
         ),
       ),
     );
